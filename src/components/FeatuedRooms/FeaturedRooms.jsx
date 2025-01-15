@@ -89,7 +89,7 @@ function FeaturedRooms() {
                       className="w-full cursor-pointer"
                       color="green"
                     >
-                      Book Now
+                      {/* Book Now */}
                     </Button>
                   </Link>
                 </div>
