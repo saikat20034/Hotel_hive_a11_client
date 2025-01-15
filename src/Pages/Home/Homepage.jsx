@@ -5,6 +5,8 @@ import MyMap from "../../components/MyMap/MyMap";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import UserReviews from "../../components/UserReviews/UserReviews";
 import Swal from "sweetalert2";
+import TravelBlogSection from "../../components/TravelBlog/TravelBlog";
+import MembershipPerks from "../../components/MemberShip/MemberShip";
 
 function Homepage() {
   useEffect(() => {
@@ -22,6 +24,8 @@ Swal.fire({
       <FeaturedRooms />
       <UserReviews />
       <MyMap />
+      <TravelBlogSection></TravelBlogSection>
+      <MembershipPerks></MembershipPerks>
       <Newsletter />
     </div>
   );
