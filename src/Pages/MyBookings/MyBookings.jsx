@@ -151,7 +151,7 @@ function MyBookings() {
                       }
                       className="px-3 py-2 bg-red-700 rounded-md text-white"
                     >
-                      {/* Cancel Booking */}
+                      Cancel Booking
                     </button>
                   </td>
                 </tr>
