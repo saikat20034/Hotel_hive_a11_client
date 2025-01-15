@@ -59,7 +59,7 @@ const TravelBlogSection = () => {
                   href={blog.link}
                   className="text-blue-500 hover:underline font-semibold"
                 >
-                  Read More →
+                  {/* Read More → */}
                 </a>
               </div>
             </div>
