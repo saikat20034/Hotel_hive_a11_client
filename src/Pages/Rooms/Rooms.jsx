@@ -204,7 +204,7 @@ function Rooms() {
           </div>
         </div>
       ) : (
-        // <Spinner />
+        <Spinner />
       )}
     </>
   );
