@@ -70,4 +70,4 @@ const TravelBlogSection = () => {
   );
 };
 
-export default TravelBlogSection;
+// export default TravelBlogSection;
