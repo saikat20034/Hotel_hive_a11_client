@@ -164,4 +164,4 @@ function MyBookings() {
   );
 }
 
-// export default MyBookings;
+export default MyBookings;
