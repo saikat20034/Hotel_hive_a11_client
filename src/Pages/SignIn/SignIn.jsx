@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
-import { FaGoogle } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 import { Typography, Input, Button } from '@material-tailwind/react';
 import { EyeSlashIcon, EyeIcon } from '@heroicons/react/24/solid';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -16,6 +15,7 @@ export function SignIn() {
   const location = useLocation();
   const navigate = useNavigate();
   const from = location?.state || '/';
+
   const handleGoogleLogin = () => {
     googleLogin()
       .then(result => {
@@ -25,6 +25,7 @@ export function SignIn() {
       })
       .catch(error => console.log(error));
   };
+
   const handleGithubLogin = () => {
     githubLogin()
       .then(result => {
@@ -35,6 +36,7 @@ export function SignIn() {
       })
       .catch(error => console.log(error));
   };
+
   const handleLoginUser = e => {
     e.preventDefault();
     setPasswordShown(false);
@@ -51,31 +53,23 @@ export function SignIn() {
         toast.error('Wrong Email or Password');
       });
   };
+
   return (
-    <div className=" font-fontPrimary">
-      <section className="grid text-center  items-center p-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+      <section className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <Typography
           variant="h3"
-          color="black"
-          className="mb-2  font-fontPrimary"
+          className="text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500"
         >
           Sign In
         </Typography>
-        <Typography className="mb-6 text-black font-normal text-[18px] font-fontPrimary">
+        <Typography className="text-center text-gray-600 mb-6">
           Enter your email and password to sign in
         </Typography>
-        <form
-          onSubmit={handleLoginUser}
-          className="mx-auto max-w-[24rem] text-left"
-        >
-          <div className="mb-6">
-            <label htmlFor="email">
-              <Typography
-                variant="small"
-                className="mb-2 block font-medium text-black  font-fontPrimary"
-              >
-                Your Email
-              </Typography>
+        <form onSubmit={handleLoginUser}>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-700">
+              Email
             </label>
             <Input
               id="email"
@@ -84,77 +78,65 @@ export function SignIn() {
               type="email"
               name="email"
               label="Email"
-              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200  font-fontPrimary"
+              className="w-full mt-1 focus:ring-pink-500 focus:border-pink-500"
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="password">
-              <Typography
-                variant="small"
-                className="mb-2 block font-medium text-black  font-fontPrimary"
-              >
-                Password
-              </Typography>
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-gray-700">
+              Password
             </label>
             <Input
+              id="password"
               size="lg"
               label="Password"
               name="password"
-              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
               type={passwordShown ? 'text' : 'password'}
               icon={
-                <i onClick={togglePasswordVisiblity}>
+                <i onClick={togglePasswordVisiblity} className="cursor-pointer">
                   {passwordShown ? (
-                    <EyeIcon className="h-5 w-5" />
+                    <EyeIcon className="h-5 w-5 text-pink-500" />
                   ) : (
-                    <EyeSlashIcon className="h-5 w-5" />
+                    <EyeSlashIcon className="h-5 w-5 text-gray-500" />
                   )}
                 </i>
               }
+              className="w-full mt-1 focus:ring-pink-500 focus:border-pink-500"
             />
           </div>
-          <small className="text-red-700 -mb-3 animate__animated animate__shakeX">
-            {error}
-          </small>
+          <small className="text-red-600">{error}</small>
           <Button
             type="submit"
-            color="gray"
-            size="lg"
-            className="mt-4  font-fontPrimary"
+            className="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500"
             fullWidth
           >
-            sign in
+            Sign In
           </Button>
-          <div className="flex justify-between gap-4 mx-0 md:mx-6">
+          <div className="flex items-center justify-between mt-4">
             <Button
               onClick={handleGoogleLogin}
               variant="outlined"
               size="md"
-              className="mt-4 flex  items-center justify-center gap-2 text-black  font-fontPrimary"
+              className="flex items-center justify-center gap-2 text-gray-700 hover:text-white hover:bg-red-500"
               fullWidth
             >
-              <FaGoogle className="text-lg text-black" />
-              google
+              <FaGoogle />
+              Google
             </Button>
             <Button
               onClick={handleGithubLogin}
               variant="outlined"
               size="md"
-              className="mt-4 flex  items-center justify-center gap-2 font-fontPrimary text-black"
+              className="flex items-center justify-center gap-2 text-gray-700 hover:text-white hover:bg-black"
               fullWidth
             >
-              <FaGithub className="text-lg text-black" />
+              <FaGithub />
               Github
             </Button>
           </div>
-          <Typography
-            variant="small"
-            color="gray"
-            className="mt-4 text-center font-normal font-fontPrimary text-black"
-          >
+          <Typography variant="small" color="gray" className="text-center mt-4">
             Not registered?{' '}
-            <Link to="/signup" className="font-medium text-black">
-              Create account
+            <Link to="/signup" className="text-pink-500 hover:underline">
+              Create an account
             </Link>
           </Typography>
         </form>
