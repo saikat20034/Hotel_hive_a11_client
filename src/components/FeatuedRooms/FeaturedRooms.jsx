@@ -104,4 +104,4 @@ function FeaturedRooms() {
   );
 }
 
-export default FeaturedRooms;
+// export default FeaturedRooms;
