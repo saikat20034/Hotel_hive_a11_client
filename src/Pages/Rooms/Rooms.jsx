@@ -12,13 +12,13 @@ function Rooms() {
   const [selectedOption, setSelectedOption] = useState('');
   const [rooms, setRooms] = useState([]);
   useEffect(() => {
-    axios.get(`https://hotel-hive-server.vercel.app/rooms`).then(res => {
+    axios.get(`https://hotelhive-kappa.vercel.app/rooms`).then(res => {
       setRooms(res.data);
     });
   }, []);
 
   const handleAllFilter = () => {
-    axios.get(`https://hotel-hive-server.vercel.app/rooms`).then(res => {
+    axios.get(`https://hotelhive-kappa.vercel.app/rooms`).then(res => {
       setRooms(res.data);
     });
   };
@@ -27,9 +27,7 @@ function Rooms() {
     const highValue = 2000;
     (async () => {
       axios
-        .get(
-          `https://hotel-hive-server.vercel.app/room/${lowValue}/${highValue}`
-        )
+        .get(`https://hotelhive-kappa.vercel.app/room/${lowValue}/${highValue}`)
         .then(res => {
           setRooms(res.data);
         });
@@ -41,9 +39,7 @@ function Rooms() {
     const highValue = 5000;
     (async () => {
       axios
-        .get(
-          `https://hotel-hive-server.vercel.app/room/${lowValue}/${highValue}`
-        )
+        .get(`https://hotelhive-kappa.vercel.app/room/${lowValue}/${highValue}`)
         .then(res => {
           setRooms(res.data);
         });
@@ -54,9 +50,7 @@ function Rooms() {
     const highValue = 10000000;
     (async () => {
       axios
-        .get(
-          `https://hotel-hive-server.vercel.app/room/${lowValue}/${highValue}`
-        )
+        .get(`https://hotelhive-kappa.vercel.app/room/${lowValue}/${highValue}`)
         .then(res => {
           setRooms(res.data);
         });

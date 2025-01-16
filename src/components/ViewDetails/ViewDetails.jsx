@@ -15,9 +15,13 @@ function ViewDetails() {
   const [review, setReview] = useState([]);
 
   useEffect(() => {
-    axios.get(`https://hotel-hive-server.vercel.app/rooms/${id}`, {withCredentials:true}).then(res => {
-      setRoom(res.data);
-    });
+    axios
+      .get(`https://hotelhive-kappa.vercel.app/rooms/${id}`, {
+        withCredentials: true,
+      })
+      .then(res => {
+        setRoom(res.data);
+      });
   }, [id, control]);
 
   useEffect(() => {
@@ -58,7 +62,7 @@ function ViewDetails() {
       confirmButtonText: 'Yes, Confirm Booking',
     }).then(result => {
       if (result.isConfirmed) {
-        fetch('https://hotel-hive-server.vercel.app/booking', {
+        fetch('https://hotelhive-kappa.vercel.app/booking', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -77,16 +81,13 @@ function ViewDetails() {
 
         let status = !room?.availability;
 
-        fetch(
-          `https://hotel-hive-server.vercel.app/rooms/update/${room?._id}`,
-          {
-            method: 'PUT',
-            headers: {
-              'content-type': 'application/json',
-            },
-            body: JSON.stringify({ status }),
-          }
-        )
+        fetch(`https://hotelhive-kappa.vercel.app/rooms/update/${room?._id}`, {
+          method: 'PUT',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({ status }),
+        })
           .then(res => res.json())
           .then(data => {
             if (data.modifiedCount) {
@@ -97,7 +98,7 @@ function ViewDetails() {
     });
   };
   useEffect(() => {
-    axios.get(`https://hotel-hive-server.vercel.app/review/${id}`).then(res => {
+    axios.get(`https://hotelhive-kappa.vercel.app/review/${id}`).then(res => {
       setReview(res.data);
     });
   }, [id]);
@@ -108,7 +109,7 @@ function ViewDetails() {
         <title>View Details</title>
       </Helmet>
       {loading ? (
-        <Spinner/>
+        <Spinner />
       ) : (
         <>
           <div className="mt-8 md:mt-12 mx-2  grid lg:gap-6 grid-cols-1 lg:grid-cols-12">
@@ -131,7 +132,8 @@ function ViewDetails() {
               </div>
               <div className="space-y-3">
                 <p>
-                  <span className='font-semibold text-black'>Description:</span> {room.roomDescription}
+                  <span className="font-semibold text-black">Description:</span>{' '}
+                  {room.roomDescription}
                   {room.roomDescription}
                   {room.roomDescription}
                   {room.roomDescription}
@@ -208,7 +210,9 @@ function ViewDetails() {
             </div>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold mt-4 text-center md:text-start">Reviews</h2>
+            <h2 className="text-2xl font-semibold mt-4 text-center md:text-start">
+              Reviews
+            </h2>
             <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 mx-2">
               {review?.length ? (
                 review.map(item => (
@@ -217,7 +221,8 @@ function ViewDetails() {
                     className="p-5 border border-gray-300 bg-gray-100 rounded-lg space-y-3"
                   >
                     <p>Rating: {item.rating}</p>
-                    <p>Description: {item.ratingDescription}</p> <hr className='border border-gray-400'/>
+                    <p>Description: {item.ratingDescription}</p>{' '}
+                    <hr className="border border-gray-400" />
                     <p className="text-md">{item.username}</p>
                     <small>Customer</small>
                   </div>

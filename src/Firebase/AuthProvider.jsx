@@ -51,12 +51,11 @@ function AuthProvider({ children }) {
   };
 
   //logOut
-  const logOut = async() => {
-    const { data } = await axios(
-      `https://hotel-hive-server.vercel.app/logout`,
-      { withCredentials: true }
-    );
-    console.log(data)
+  const logOut = async () => {
+    const { data } = await axios(`https://hotelhive-kappa.vercel.app/logout`, {
+      withCredentials: true,
+    });
+    console.log(data);
     signOut(auth).then(() => {
       setUser(null);
       toast.success('Successfully Logged Out');
@@ -68,15 +67,15 @@ function AuthProvider({ children }) {
       setUser(currentUser);
       setLoading(false);
       if (currentUser) {
-        const loggedUser = { email: currentUser.email }
+        const loggedUser = { email: currentUser.email };
         axios
-          .post('https://hotel-hive-server.vercel.app/jwt', loggedUser, {
+          .post('https://hotelhive-kappa.vercel.app/jwt', loggedUser, {
             withCredentials: true,
           })
           .then(res => {
             console.log('token response', res.data);
           });
-        }
+      }
     });
 
     return () => unsubscribe();

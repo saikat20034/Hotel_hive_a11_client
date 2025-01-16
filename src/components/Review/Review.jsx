@@ -22,7 +22,7 @@ function Review() {
       id: token,
     };
 
-    fetch(`https://hotel-hive-server.vercel.app/rooms/review/${token}`, {
+    fetch(`https://hotelhive-kappa.vercel.app/rooms/review/${token}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -37,7 +37,7 @@ function Review() {
         }
       });
 
-    fetch(`https://hotel-hive-server.vercel.app/rooms/review/${token}`, {
+    fetch(`https://hotelhive-kappa.vercel.app/rooms/review/${token}`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

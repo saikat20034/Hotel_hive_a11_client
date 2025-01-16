@@ -7,7 +7,7 @@ import Spinner from '../Spinner/Spinner';
 function FeaturedRooms() {
   const [featuredRoom, setFeaturedRoom] = useState([]);
   useEffect(() => {
-    axios.get(`https://hotel-hive-server.vercel.app/rooms`).then(res => {
+    axios.get(`https://hotelhive-kappa.vercel.app/rooms`).then(res => {
       const data = res.data;
       const newData = data.slice(0, 6);
       setFeaturedRoom(newData);
