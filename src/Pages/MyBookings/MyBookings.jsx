@@ -101,7 +101,7 @@ function MyBookings() {
   };
 
   return (
-    <div className="space-y-6 my-10">
+    <div className="space-y-6 my-10 p-16 bg-gray-200 rounded-lg">
       <Helmet>
         <title>My Booking</title>
       </Helmet>

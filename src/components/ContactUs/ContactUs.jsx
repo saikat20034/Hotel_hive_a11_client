@@ -2,13 +2,13 @@ import { Helmet } from "react-helmet";
 
 function ContactUs() {
   return (
-    <div>
+    <div >
       <Helmet>
         <title>Contact Us</title>
       </Helmet>
       <div className="bg-gray-50 dark:bg-gray-900" id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
-          <h2 className="text-4xl font-bold dark:text-gray-100">Contact</h2>
+          <h2 className="text-4xl font-bold dark:text-gray-100 pt-12">Contact</h2>
           <p className="pt-6 pb-6 text-base max-w-2xl text-center m-auto dark:text-gray-400">
             Want to contact us? Choose an option below and well be happy to show
             you how we can transform companys web experience.
