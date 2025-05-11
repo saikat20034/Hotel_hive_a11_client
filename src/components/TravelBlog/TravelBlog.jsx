@@ -47,7 +47,7 @@ const TravelBlogSection = () => {
                 <img
                   src={blog.image}
                   alt={blog.title}
-                  className="w-full h-52 object-cover"
+                  className="w-full h-52 object-cover rounded-lg "
                 />
               </figure>
               <div className="card-body p-4">

@@ -37,7 +37,7 @@ function Rooms() {
   };
 
   const handleLowFilter = async () => {
-    const res = await axios.get(`http://localhost:5000/rooms/0/2000`);
+    const res = await axios.get(`http://localhost:5000/room/0/2000`);
     setRooms(res.data);
     setCurrentPage(1);
   };
