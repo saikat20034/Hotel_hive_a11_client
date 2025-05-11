@@ -56,11 +56,11 @@ function Review() {
       });
   };
   return (
-    <div className="my-8 md:my-12">
+    <div className="my-8 md:my-12 bg-gray-200 p-12 rounded-lg ">
       <Helmet>
         <title>Review</title>
       </Helmet>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold lg:font-bold text-center mb-6">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold lg:font-bold text-center   mb-6">
         Review Page
       </h2>
       <form onSubmit={handleReview} className="space-y-3 max-w-3xl mx-auto">
@@ -100,7 +100,7 @@ function Review() {
         <button
           type="submit"
           disabled={isDisabled}
-          className="bg-green-800 w-full py-2 rounded-md text-white active:bg-green-900 hover:bg-green-700"
+          className="bg-blue-500 w-full py-2 rounded-md text-white active:bg-green-900 hover:bg-green-700"
         >
           Review
         </button>
