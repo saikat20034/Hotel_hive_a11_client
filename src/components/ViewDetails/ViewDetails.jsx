@@ -16,7 +16,7 @@ function ViewDetails() {
 
   useEffect(() => {
     axios
-      .get(`https://hotelhive-kappa.vercel.app/rooms/${id}`, {
+      .get(`http://localhost:5000/rooms/${id}`, {
         withCredentials: true,
       })
       .then(res => {
@@ -62,7 +62,7 @@ function ViewDetails() {
       confirmButtonText: 'Yes, Confirm Booking',
     }).then(result => {
       if (result.isConfirmed) {
-        fetch('https://hotelhive-kappa.vercel.app/booking', {
+        fetch('http://localhost:5000/booking', {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -81,7 +81,7 @@ function ViewDetails() {
 
         let status = !room?.availability;
 
-        fetch(`https://hotelhive-kappa.vercel.app/rooms/update/${room?._id}`, {
+        fetch(`http://localhost:5000/rooms/update/${room?._id}`, {
           method: 'PUT',
           headers: {
             'content-type': 'application/json',
@@ -98,7 +98,7 @@ function ViewDetails() {
     });
   };
   useEffect(() => {
-    axios.get(`https://hotelhive-kappa.vercel.app/review/${id}`).then(res => {
+    axios.get(`http://localhost:5000/review/${id}`).then(res => {
       setReview(res.data);
     });
   }, [id]);
@@ -203,7 +203,7 @@ function ViewDetails() {
                     type="submit"
                     className="bg-green-800 w-full py-2 rounded-md text-white active:bg-green-900 hover:bg-green-700"
                   >
-                    {room?.availability ? 'Book Now' : 'Unavailable'}
+                    {room?.availability ? 'Book Now' : 'Uavailable'}
                   </button>
                 </form>
               </div>

@@ -7,7 +7,7 @@ import Spinner from '../Spinner/Spinner';
 function FeaturedRooms() {
   const [featuredRoom, setFeaturedRoom] = useState([]);
   useEffect(() => {
-    axios.get(`https://hotelhive-kappa.vercel.app/rooms`).then(res => {
+    axios.get(`http://localhost:5000/rooms`).then(res => {
       const data = res.data;
       const newData = data.slice(0, 6);
       setFeaturedRoom(newData);
@@ -24,7 +24,7 @@ function FeaturedRooms() {
           detail. Experience luxury and relaxation like never before with
           HotelHives curated selection of premium accommodations.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 p-2 md:gap-4  rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 p-2 md:gap-4  rounded-lg">
           {featuredRoom ? (
             featuredRoom.map(room => (
               <div key={room._id} className="h-full">
@@ -32,7 +32,7 @@ function FeaturedRooms() {
                   <div className="relative">
                     <Link to={`/rooms/${room._id}`} className="cursor-pointer">
                       <img
-                        className="rounded-lg w-full h-[250px]"
+                        className="rounded-lg w-full h-[200px]"
                         src={room?.roomImage}
                         alt=""
                       />
@@ -44,10 +44,10 @@ function FeaturedRooms() {
                   <h2 data-aos="fade-up" className="text-xl font-semibold">
                     {room.title}
                   </h2>
-                  <p data-aos="fade-up" className="text-sm mb-2">
+                  {/* <p data-aos="fade-up" className="text-sm mb-2">
                     Hotel in Dhaka
-                  </p>
-                  <div className="flex justify-between gap-2">
+                  </p> */}
+                  {/* <div className="flex justify-between gap-2">
                     <div className="flex gap-2 my-2">
                       <p>
                         <span
@@ -73,7 +73,7 @@ function FeaturedRooms() {
                         {room?.reviews?.length} Reviews
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="pb-3">
                     <h3 data-aos="fade-up" className="text-lg font-semibold">
                       Price:{' '}
@@ -87,7 +87,7 @@ function FeaturedRooms() {
                     <Button
                       data-aos="fade-up"
                       className="w-full cursor-pointer"
-                      color="green"
+                      color="blue"
                     >
                       Book Now
                     </Button>

@@ -11,7 +11,7 @@ function UserReviews() {
   const [slidesPerView, setSlidesPerView] = useState(3);
 
   useEffect(() => {
-    axios.get(`https://hotelhive-kappa.vercel.app/review`).then(res => {
+    axios.get(`http://localhost:5000/review`).then(res => {
       setReview(res.data);
     });
   }, []);

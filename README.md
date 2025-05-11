@@ -1,6 +1,6 @@
 ﻿# Hotel Hive
 
-Live site: [Hotel Hive](https://hotel-hive9340.web.app/)
+Live site: [Hotel Hive](https://unarmed-mouth.surge.sh/)
 
 ## Assignment_Category_0003
 
@@ -32,4 +32,3 @@ Hotel Hive is a website that provides a seamless experience for booking hotel ro
 - Tailwind CSS
 - Material Tailwind CSS
 - Firebase Authentication
-

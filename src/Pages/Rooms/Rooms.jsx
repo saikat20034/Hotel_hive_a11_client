@@ -12,13 +12,13 @@ function Rooms() {
   const [selectedOption, setSelectedOption] = useState('');
   const [rooms, setRooms] = useState([]);
   useEffect(() => {
-    axios.get(`https://hotelhive-kappa.vercel.app/rooms`).then(res => {
+    axios.get(`http://localhost:5000/rooms`).then(res => {
       setRooms(res.data);
     });
   }, []);
 
   const handleAllFilter = () => {
-    axios.get(`https://hotelhive-kappa.vercel.app/rooms`).then(res => {
+    axios.get(`http://localhost:5000/rooms`).then(res => {
       setRooms(res.data);
     });
   };
@@ -27,7 +27,7 @@ function Rooms() {
     const highValue = 2000;
     (async () => {
       axios
-        .get(`https://hotelhive-kappa.vercel.app/room/${lowValue}/${highValue}`)
+        .get(`http://localhost:5000/rooms/${lowValue}/${highValue}`)
         .then(res => {
           setRooms(res.data);
         });
@@ -39,7 +39,7 @@ function Rooms() {
     const highValue = 5000;
     (async () => {
       axios
-        .get(`https://hotelhive-kappa.vercel.app/room/${lowValue}/${highValue}`)
+        .get(`http://localhost:5000/room/${lowValue}/${highValue}`)
         .then(res => {
           setRooms(res.data);
         });
@@ -50,7 +50,7 @@ function Rooms() {
     const highValue = 10000000;
     (async () => {
       axios
-        .get(`https://hotelhive-kappa.vercel.app/room/${lowValue}/${highValue}`)
+        .get(`http://localhost:5000/room/${lowValue}/${highValue}`)
         .then(res => {
           setRooms(res.data);
         });
@@ -126,7 +126,7 @@ function Rooms() {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 p-4  rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 p-4  rounded-lg">
             {rooms.map(room => (
               <div
                 key={room._id}
