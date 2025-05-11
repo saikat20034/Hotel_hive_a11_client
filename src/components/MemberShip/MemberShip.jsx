@@ -25,7 +25,7 @@ const MembershipPerks = () => {
   ];
 
   return (
-    <section id="membership-perks" className="bg-white py-10">
+    <section id="membership-perks" className="bg-gray-200 rounded-lg py-10">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">
           Membership Perks

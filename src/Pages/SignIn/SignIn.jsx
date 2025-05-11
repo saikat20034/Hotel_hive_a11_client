@@ -55,11 +55,11 @@ export function SignIn() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+    <div className="min-h-screen flex items-center justify-center bg-gray-200 rounded-lg m-10">
       <section className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <Typography
           variant="h3"
-          className="text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500"
+          className="text-center font-bold text-transparent bg-clip-text bg-black p-12"
         >
           Sign In
         </Typography>
@@ -104,19 +104,15 @@ export function SignIn() {
             />
           </div>
           <small className="text-red-600">{error}</small>
-          <Button
-            type="submit"
-            className="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500"
-            fullWidth
-          >
+          <Button type="submit" className="w-full mt-4 bg-blue-500" fullWidth>
             Sign In
           </Button>
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex items-center justify-between space-x-2 mt-4">
             <Button
               onClick={handleGoogleLogin}
               variant="outlined"
               size="md"
-              className="flex items-center justify-center gap-2 text-gray-700 hover:text-white hover:bg-red-500"
+              className="flex items-center justify-center gap-2 text-gray-700 hover:text-white hover:bg-black"
               fullWidth
             >
               <FaGoogle />

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Option, Select } from '@material-tailwind/react';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from 'react-helmet';
@@ -98,12 +98,12 @@ function Rooms() {
               >
                 Filter By Price
               </label>
-              <Select label="Select Filter Option">
-                <Option onClick={handleAllFilter}>All</Option>
-                <Option onClick={handleLowFilter}>Price 0 to 2000</Option>
-                <Option onClick={handleMidFilter}>Price 2001 to 5000</Option>
-                <Option onClick={handleHighFilter}>Price 5001 to Max</Option>
-              </Select>
+              <select label="Select Filter Option  " className= "border px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
+                <option onClick={handleAllFilter}>All</option>
+                <option onClick={handleLowFilter}>Price 0 to 2000</option>
+                <option onClick={handleMidFilter}>Price 2001 to 5000</option>
+                <option onClick={handleHighFilter}>Price 5001 to Max</option>
+              </select>
             </div>
             <div className="w-full px-4">
               <label

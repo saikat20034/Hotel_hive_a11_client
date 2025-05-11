@@ -9,12 +9,12 @@ function FeaturedRooms() {
   useEffect(() => {
     axios.get(`http://localhost:5000/rooms`).then(res => {
       const data = res.data;
-      const newData = data.slice(0, 6);
+      const newData = data.slice(0, 8);
       setFeaturedRoom(newData);
     });
   }, []);
   return (
-    <div>
+    <div className="bg-gray-200 rounded-lg p-12">
       <div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center">
           Featured Rooms
@@ -24,11 +24,11 @@ function FeaturedRooms() {
           detail. Experience luxury and relaxation like never before with
           HotelHives curated selection of premium accommodations.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 p-2 md:gap-4  rounded-lg">
+        <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 p-2 md:gap-4  rounded-lg">
           {featuredRoom ? (
             featuredRoom.map(room => (
               <div key={room._id} className="h-full">
-                <div className="space-y-2 my-2 h-full flex flex-col justify-between border border-gray-400 p-3 md:p-4 rounded-lg">
+                <div className="space-y-1 my-2 h-full flex flex-col justify-between border border-gray-400 p-3 md:p-4 rounded-lg hover:bg-gray-300">
                   <div className="relative">
                     <Link to={`/rooms/${room._id}`} className="cursor-pointer">
                       <img

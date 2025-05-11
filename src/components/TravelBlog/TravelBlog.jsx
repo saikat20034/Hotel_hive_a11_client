@@ -29,7 +29,7 @@ const TravelBlogSection = () => {
   ];
 
   return (
-    <section id="travel-blog" className="bg-gray-100 py-10">
+    <section id="travel-blog" className="bg-gray-100 rounded-lg py-10">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
           Travel Inspiration Blog
