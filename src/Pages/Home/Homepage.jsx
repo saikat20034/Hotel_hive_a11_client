@@ -7,6 +7,8 @@ import UserReviews from "../../components/UserReviews/UserReviews";
 import Swal from "sweetalert2";
 import TravelBlogSection from "../../components/TravelBlog/TravelBlog";
 import MembershipPerks from "../../components/MemberShip/MemberShip";
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
+import FAQs from "../../components/FAQs/FAQs";
 
 function Homepage() {
   useEffect(() => {
@@ -22,10 +24,12 @@ Swal.fire({
     <div className="my-8 md:my-10 lg:my-14 space-y-8 md:space-y-12 lg:space-y-16">
       <Banner />
       <FeaturedRooms />
+      <WhyChooseUs></WhyChooseUs>
       <UserReviews />
       <MyMap />
       <TravelBlogSection></TravelBlogSection>
       <MembershipPerks></MembershipPerks>
+      <FAQs></FAQs>
       <Newsletter />
     </div>
   );

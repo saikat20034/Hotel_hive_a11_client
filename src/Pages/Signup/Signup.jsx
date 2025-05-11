@@ -54,7 +54,7 @@ function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200 m-10 rounded-lg px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gray-200 m-10 rounded-lg p-10">
       <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-2xl">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">Create Your Account</h2>
         <p className="text-center text-gray-600 mb-6">Welcome! Please fill out the details to sign up.</p>

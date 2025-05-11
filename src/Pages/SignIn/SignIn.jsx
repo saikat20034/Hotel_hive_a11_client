@@ -55,7 +55,7 @@ export function SignIn() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200 rounded-lg m-10">
+    <div className="min-h-screen flex items-center justify-center bg-gray-200 rounded-lg  mt-10">
       <section className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <Typography
           variant="h3"
