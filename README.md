@@ -1,6 +1,6 @@
 ﻿# Hotel Hive
 
-Live site: [Hotel Hive](https://unarmed-mouth.surge.sh/)
+Live site: [Hotel Hive](hotel-hive-5f52f.web.app/)
 
 ## Assignment_Category_0003
 
@@ -80,4 +80,3 @@ If nodemon is not installed, you can install it globally:
 
 bash
 npm install -g nodemon
-
