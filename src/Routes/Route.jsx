@@ -11,6 +11,9 @@ import ContactUs from '../components/ContactUs/ContactUs';
 import ViewDetails from '../components/ViewDetails/ViewDetails';
 import PrivateRoute from './PrivateRoute';
 import Review from '../components/Review/Review';
+import PrivacyPolicy from '../components/PrivacyPolicy/PrivacyPolicy';
+import CookiesPolicy from '../components/CookiesPolicy/CookiesPolicy';
+import TeamPage from '../components/TeamPage/TeamPage';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -39,7 +42,7 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <MyBookings />
           </PrivateRoute>
-        )
+        ),
       },
       {
         path: '/about-us',
@@ -51,7 +54,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/rooms/review/:token',
-        element: <Review/>
+        element: <Review />,
+      },
+      {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy></PrivacyPolicy>,
+      },
+      {
+        path: '/cookies',
+        element: <CookiesPolicy></CookiesPolicy>,
+      },
+      {
+        path: '/teams',
+        element: <TeamPage></TeamPage>
       },
       {
         path: '/rooms/:id',

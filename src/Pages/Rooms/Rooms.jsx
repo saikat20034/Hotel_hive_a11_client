@@ -19,7 +19,7 @@ function Rooms() {
   }, []);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/rooms`).then(res => {
+    axios.get(`https://hotelhive-kappa.vercel.app/rooms`).then(res => {
       setRooms(res.data);
     });
   }, []);
@@ -31,25 +31,25 @@ function Rooms() {
   }, [rooms, currentPage]);
 
   const handleAllFilter = async () => {
-    const res = await axios.get(`http://localhost:5000/rooms`);
+    const res = await axios.get(`https://hotelhive-kappa.vercel.app/rooms`);
     setRooms(res.data);
     setCurrentPage(1);
   };
 
   const handleLowFilter = async () => {
-    const res = await axios.get(`http://localhost:5000/room/0/2000`);
+    const res = await axios.get(`https://hotelhive-kappa.vercel.app/room/0/2000`);
     setRooms(res.data);
     setCurrentPage(1);
   };
 
   const handleMidFilter = async () => {
-    const res = await axios.get(`http://localhost:5000/room/2001/5000`);
+    const res = await axios.get(`https://hotelhive-kappa.vercel.app/room/2001/5000`);
     setRooms(res.data);
     setCurrentPage(1);
   };
 
   const handleHighFilter = async () => {
-    const res = await axios.get(`http://localhost:5000/room/5001/10000000`);
+    const res = await axios.get(`https://hotelhive-kappa.vercel.app/room/5001/10000000`);
     setRooms(res.data);
     setCurrentPage(1);
   };

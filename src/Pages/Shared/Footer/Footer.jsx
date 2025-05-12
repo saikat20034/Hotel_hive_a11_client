@@ -15,7 +15,7 @@ function Footer() {
 
             <div className="flex flex-wrap justify-center mt-6 -mx-4">
               <a
-                href="#"
+                href="/"
                 className="mx-4 text-sm text-gray-300 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >
@@ -33,7 +33,7 @@ function Footer() {
               </a>
 
               <a
-                href="#"
+                href="/teams"
                 className="mx-4 text-sm text-gray-300 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >
@@ -42,7 +42,7 @@ function Footer() {
               </a>
 
               <a
-                href="#"
+                href="/privacy-policy"
                 className="mx-4 text-sm text-gray-300 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >
@@ -51,7 +51,7 @@ function Footer() {
               </a>
 
               <a
-                href="#"
+                href="/cookies"
                 className="mx-4 text-sm text-gray-300 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >

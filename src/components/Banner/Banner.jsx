@@ -16,7 +16,7 @@ function BannerSlider() {
         'Discover a new way to book hotels with HotelHive. Experience seamless functionality across devices, innovative features, and join the hive to unlock effortless travel planning today!',
     },
     {
-      img: 'https://thumbs.dreamstime.com/b/luxury-hotels-resorts-las-vegas-344741387.jpg', // Replace with a second image
+      img: 'https://i.postimg.cc/cHtt07hh/luxury-hotels-resorts-las-vegas-344741387.jpg', // Replace with a second image
       title: 'Luxurious Comfort',
       subtitle: 'Your Comfort, Our Priority!',
       description:

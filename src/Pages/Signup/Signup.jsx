@@ -123,13 +123,13 @@ function Signup() {
             {error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
           </div>
 
-          {/* <button
+          <button
             type="submit"
             disabled={loading}
             className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold py-3 rounded-lg transition-all"
           >
             {loading ? 'Signing Up...' : 'Sign Up'}
-          </button> */}
+          </button>
         </form>
 
         <p className="text-center text-gray-700 mt-4">

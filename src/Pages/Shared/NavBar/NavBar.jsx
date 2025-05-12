@@ -167,13 +167,14 @@ function NavBar() {
     <div className="bg-gray-400">
       <Navbar
         style={{ borderWidth: 0 }}
-        className="fixed top-0 z-50 h-max max-w-full  px-4 py-2 lg:px-8 lg:py-4 shadow-none rounded-none "
+        className="fixed top-0 z-50 h-max max-w-[1680px]  px-4 py-2 lg:px-2 lg:py-1 shadow-none rounded-none "
       >
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link to="/">
-            <Typography className="mr-4 cursor-pointer py-1.5 font-semibold lg:font-bold text-xl md:text-2xl text-black font-lato">
+            {/* <Typography className="mr-4 cursor-pointer py-1.5 font-semibold lg:font-bold text-xl md:text-2xl text-black font-lato">
               Hotel<span className="text-red-700">H</span>ive
-            </Typography>
+            </Typography> */}
+            <img className=' h-20 w-50' src="/src/assets/Hotel Hive.png" alt="" />
           </Link>
           <div className="flex items-center justify-between gap-8">
             <div className="mr-4 hidden lg:block">{navList}</div>

@@ -3,6 +3,7 @@ import NavBar from "../Pages/Shared/NavBar/NavBar"
 import Footer from "../Pages/Shared/Footer/Footer"
 import { Toaster } from "react-hot-toast";
 
+
 function Root() {
   return (
     <div>
@@ -14,6 +15,7 @@ function Root() {
       </div>
       <Footer />
       <Toaster />
+
     </div>
   );
 }
