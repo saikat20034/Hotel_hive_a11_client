@@ -32,3 +32,52 @@ Hotel Hive is a website that provides a seamless experience for booking hotel ro
 - Tailwind CSS
 - Material Tailwind CSS
 - Firebase Authentication
+
+## Installation Guide for the Project
+Follow the steps below to set up and run the project on your local machine:
+
+1️⃣ Clone or Download the Project
+Clone the repository using Git:
+
+bash
+git clone https://github.com/your-username/your-repo-name.git
+OR download the ZIP file and extract it.
+
+2️⃣ Open the Project in VS Code or Any IDE
+Open both the Client Side and Server Side folders in your preferred code editor (e.g., VS Code).
+
+3️⃣ Install All Required Packages
+Open the terminal in each folder (client and server) separately and run:
+
+bash
+npm install
+4️⃣ Set Up Environment Variables (if required)
+If the project uses environment variables, create a .env file in the server and/or client folders.
+
+Copy variables from .env.example or set them according to the README/documentation.
+
+5️⃣ Run the Server
+In the server folder terminal, run:
+
+bash
+nodemon jsx
+(Make sure nodemon is installed globally or as a dev dependency.)
+
+6️⃣ Run the Client
+In the client folder terminal, run:
+
+bash
+npm run dev
+7️⃣ Open the Website
+After the client starts successfully, a local development URL (usually http://localhost:5173/) will be displayed in the terminal.
+
+Click the link or open it in your browser to view the website.
+
+✅ Additional Tips
+Ensure Node.js and npm are installed on your system.
+
+If nodemon is not installed, you can install it globally:
+
+bash
+npm install -g nodemon
+
