@@ -1,6 +1,6 @@
 ﻿# Hotel Hive
 
-Live site: [Hotel Hive](hotel-hive-5f52f.web.app)
+Live site: [Hotel Hive](https://hotel-hive-5f52f.web.app/)
 
 ## Assignment_Category_0003
 
