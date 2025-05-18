@@ -14,7 +14,7 @@ function FeaturedRooms() {
     });
   }, []);
   return (
-    <div className="bg-gray-200 rounded-lg p-12">
+    <div className="bg-gray-200  rounded-lg p-12">
       <div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center">
           Featured Rooms
