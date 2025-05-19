@@ -77,7 +77,7 @@ function NavBar() {
 
   return (
     <div className="sticky top-0 z-50 bg-blue-900">
-      <Navbar className="max-w-full px-4 py-2 lg:px-8 lg:py-4 rounded-none shadow-md">
+      <Navbar className="max-w-full  px-4 py-2 lg:px-8 lg:py-4 rounded-none shadow-md">
         <div className="flex items-center justify-between text-blue-gray-900">
           <div className="flex items-center text-blue-gray-900">
             <Link to="/">
@@ -94,7 +94,7 @@ function NavBar() {
           <div className="flex items-center justify-between gap-6">
             {/* Dark/Light Toggle */}
             <label className="flex items-center cursor-pointer">
-              <span className="mr-2 text-white font-lato">Dark Mode</span>
+              <span className="mr-2 text-black font-lato">Dark Mode</span>
               <input
                 type="checkbox"
                 onChange={handleToggle}
