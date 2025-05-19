@@ -40,7 +40,7 @@ function NavBar() {
   };
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 md:gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+    <ul className="mt-2 mb-0 flex flex-col gap-2 md:gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       {['/', '/rooms', '/my-bookings', '/about-us', '/contact-us'].map(
         (path, index) => {
           const labels = [
@@ -194,7 +194,7 @@ function NavBar() {
         {/* Mobile Nav Content */}
         <Collapse open={openNav}>
           {navList}
-          <div className="flex flex-col gap-2 mb-4 px-4">
+          <div className="flex flex-col gap-2 mb-0 px-4">
             {/* Mobile Dark/Light Toggle */}
             <label className="flex items-center cursor-pointer">
               <span className="mr-2 text-white font-lato">Dark Mode</span>
