@@ -8,7 +8,7 @@ function MyMap() {
   return (
     <section className="bg-gray-200 rounded-lg p-12">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center mb-4">
+        <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center mb-4">
           🌍 Discover Our Location
         </h2>
         <p className="text-lg text-black mb-8 max-w-xl mx-auto">

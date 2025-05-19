@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center">
+        <h2 className="text-3xl text-black mb-10 md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center">
           Why Choose Us
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

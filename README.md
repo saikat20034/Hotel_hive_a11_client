@@ -1,83 +1,66 @@
-﻿# Hotel Hive
+﻿# 🏨 Hotel Hive
 
-Live site: [Hotel Hive](https://hotel-hive-5f52f.web.app/)
+🌐 **Live Site**: [Hotel Hive](https://hotel-hive-5f52f.web.app/)
 
-## Assignment_Category_0003
+---
 
-Hotel Hive is a website that provides a seamless experience for booking hotel rooms and managing bookings. Here are some key features of the website:
+## 📌 Overview
 
-- **Feature-rich Rooms Section**: Browse through a wide selection of hotel rooms with detailed descriptions, images, and amenities.
-- **Interactive Map**: Explore the location of the hotel with an interactive map feature, making it easier to plan your stay.
-- **Booking Management**: Registered users can view their bookings, including details such as room type, check-in/out dates, and pricing. They can also update booking details or cancel bookings if needed.
-- **User Reviews**: Guests can leave reviews and ratings for the rooms they've booked, providing valuable feedback for other users.
-- **Responsive Design**: The website is optimized for various devices, ensuring a consistent and user-friendly experience across desktop, tablet, and mobile platforms.
+**Hotel Hive** is a feature-rich hotel booking platform that allows users to browse, book, and manage hotel room reservations effortlessly. The site also features guest reviews, an interactive location map, and full responsiveness for all devices.
 
-## npm Packages Used
+---
 
-- Pigeon Maps: A React library for rendering custom maps.
-- react-helmet: A library for managing document head data like title, meta, stylesheets, and scripts.
-- aos: A library for animating elements as they scroll into view.
-- react-router-dom: A popular library for handling routing in React applications.
-- sweetalert2: Provides beautiful, customizable, and accessible modal dialogs.
+## ✨ Features
 
+- 🛏️ **Room Listings**: Explore a variety of rooms with images, detailed descriptions, and amenities.
+- 🗺️ **Interactive Map**: Locate the hotel with a dynamic map to better plan your trip.
+- 📅 **Booking Management**: Registered users can manage their bookings, update details, or cancel reservations.
+- ⭐ **User Reviews**: Share your experiences and check ratings from previous guests.
+- 📱 **Responsive Design**: Optimized for desktops, tablets, and smartphones for a seamless experience.
+- 🎥 **Live Demo**:
+  ![Demo GIF](demo.gif) <!-- Replace 'demo.gif' with your actual GIF file or URL -->
 
-## Technologies Used
+---
 
+## 🧰 Technologies Used
+
+### 🚀 Frontend
+
+- React
 - React Router DOM
-- React Hot Toast
-- Sweet Alert 2
-- React Simple Typewriter
-- React Awesome Reveal
+- Tailwind CSS + Material Tailwind
 - Swiper Slider
-- Tailwind CSS
-- Material Tailwind CSS
+- React Awesome Reveal
+- AOS (Animate On Scroll)
+- SweetAlert2
+- React Hot Toast
+- React Helmet
+- React Simple Typewriter
+- Pigeon Maps
+
+### 🔐 Authentication
+
 - Firebase Authentication
 
-## Installation Guide for the Project
-Follow the steps below to set up and run the project on your local machine:
+---
 
-1️⃣ Clone or Download the Project
-Clone the repository using Git:
+## 📦 npm Packages
 
-bash
+- `react-router-dom`: Client-side routing
+- `sweetalert2`: Stylish and customizable modals
+- `react-helmet`: Manage document head data
+- `aos`: Animate elements on scroll
+- `pigeon-maps`: Render interactive maps
+- `swiper`: Modern mobile touch slider
+- `react-awesome-reveal`, `react-simple-typewriter`: Enhance UI animations
+
+---
+
+## 🛠️ Installation Guide
+
+Follow the steps below to set up the project on your local machine:
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/saikat20034/Hotel_hive_a11_client
-
-OR download the ZIP file and extract it.
-
-2️⃣ Open the Project in VS Code or Any IDE
-Open both the Client Side and Server Side folders in your preferred code editor (e.g., VS Code).
-
-3️⃣ Install All Required Packages
-Open the terminal in each folder (client and server) separately and run:
-
-bash
-npm install
-4️⃣ Set Up Environment Variables (if required)
-If the project uses environment variables, create a .env file in the server and/or client folders.
-
-Copy variables from .env.example or set them according to the README/documentation.
-
-5️⃣ Run the Server
-In the server folder terminal, run:
-
-bash
-nodemon jsx
-(Make sure nodemon is installed globally or as a dev dependency.)
-
-6️⃣ Run the Client
-In the client folder terminal, run:
-
-bash
-npm run dev
-7️⃣ Open the Website
-After the client starts successfully, a local development URL (usually http://localhost:5173/) will be displayed in the terminal.
-
-Click the link or open it in your browser to view the website.
-
-✅ Additional Tips
-Ensure Node.js and npm are installed on your system.
-
-If nodemon is not installed, you can install it globally:
-
-bash
-npm install -g nodemon

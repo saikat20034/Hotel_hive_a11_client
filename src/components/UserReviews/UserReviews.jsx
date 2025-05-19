@@ -36,7 +36,7 @@ function UserReviews() {
 
   return (
     <div className="space-y-8 bg-gray-200 p-10 rounded-lg lg:space-y-12">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold md:font-bold lg:font-extrabold text-center">
+      <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-semibold md:font-bold lg:font-extrabold text-center">
         User Reviews
       </h2>
       <div>

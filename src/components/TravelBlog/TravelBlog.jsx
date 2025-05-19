@@ -31,7 +31,7 @@ const TravelBlogSection = () => {
   return (
     <section id="travel-blog" className="bg-gray-100 rounded-lg py-10">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center mb-4">
+        <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center mb-4">
           Travel Inspiration Blog
         </h2>
         <p className="text-center text-gray-600 mb-8">

@@ -27,7 +27,7 @@ const MembershipPerks = () => {
   return (
     <section id="membership-perks" className="bg-gray-200 rounded-lg py-10">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center mb-4">
+        <h2 className="text-3xl text-black md:text-4xl lg:text-5xl font-semibold lg:font-extrabold text-center mb-4">
           Membership Perks
         </h2>
         <p className="text-gray-600 mb-8">
