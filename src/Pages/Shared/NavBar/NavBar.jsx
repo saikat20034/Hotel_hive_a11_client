@@ -76,7 +76,7 @@ function NavBar() {
   );
 
   return (
-    <div className="sticky top-0 z-50 bg-blue-900">
+    <div className="sticky top-0 z-50 bg-white">
       <Navbar className="max-w-full  px-4 py-2 lg:px-8 lg:py-4 rounded-none shadow-md">
         <div className="flex items-center justify-between text-blue-gray-900">
           <div className="flex items-center text-blue-gray-900">
@@ -120,7 +120,7 @@ function NavBar() {
             ) : (
               <div className="hidden lg:flex items-center gap-3">
                 <Tooltip content={user.displayName || 'User'}>
-                  <Link to="/profile">
+                  <Link to="/">
                     <div className="flex items-center gap-2 cursor-pointer">
                       <Avatar
                         size="sm"
@@ -152,7 +152,7 @@ function NavBar() {
             {/* Mobile Toggle Button */}
             <IconButton
               variant="text"
-              className="lg:hidden text-white"
+              className="lg:hidden text-black"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >

@@ -1,7 +1,7 @@
 function Newsletter() {
   return (
     <div>
-      <div className="relative isolate overflow-hidden bg-gray-800 px-6 py-20 shadow-2xl rounded-2xl sm:rounded-3xl sm:px-16 xl:py-24">
+      <div className="relative isolate overflow-hidden bg-gray-800 px-6 py-20 shadow-2xl rounded-lg sm:rounded-3xl sm:px-16 xl:py-24">
         <h2 className="mx-auto max-w-3xl text-center text-2xl font-bold tracking-tight text-white sm:text-4xl">
           Stay Connected with HotelHives Newsletter!
         </h2>

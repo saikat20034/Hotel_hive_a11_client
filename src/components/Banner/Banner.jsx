@@ -32,22 +32,22 @@ function BannerSlider() {
   ];
 
   return (
-    <div className="w-screen m-0 p-0 overflow-hidden">
+    <div className="w-full m-0 p-0 overflow-hidden">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
-        className="w-screen h-screen"
+        className="w-full h-[90vh] sm:h-screen lg:h-[75vh] xl:h-[70vh]"
       >
         {banners.map((banner, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-screen">
+            <div className="relative w-full h-[90vh] sm:h-screen lg:h-[75vh] xl:h-[70vh] rounded-b-lg overflow-hidden">
               <img
                 src={banner.img}
                 alt={banner.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover max-w-full max-h-full"
               />
               <div className="absolute inset-0 bg-black/50">
                 <div className="absolute bottom-10 left-5 sm:left-10 md:left-20 lg:left-32 text-white max-w-xl space-y-4 text-left px-2 sm:px-0">
