@@ -13,7 +13,7 @@ function MyBookings() {
   const [control, setControl] = useState(false);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/my-booking?email=${email}`, {
+      .get(`https://hotelhive-kappa.vercel.app/my-booking?email=${email}`, {
         withCredentials: true,
       })
       .then(res => {
@@ -37,7 +37,7 @@ function MyBookings() {
       }).then(result => {
         if (result.isConfirmed) {
           let status = true;
-          fetch(`http://localhost:5000/rooms/update/${token}`, {
+          fetch(`https://hotelhive-kappa.vercel.app/rooms/update/${token}`, {
             method: 'PUT',
             headers: {
               'content-type': 'application/json',
@@ -47,7 +47,7 @@ function MyBookings() {
             .then(res => res.json())
             .then(data => {
               if (data.modifiedCount) {
-                fetch(`http://localhost:5000/my-booking/${id}`, {
+                fetch(`https://hotelhive-kappa.vercel.app/my-booking/${id}`, {
                   method: 'DELETE',
                 })
                   .then(res => res.json())
@@ -83,7 +83,7 @@ function MyBookings() {
       },
     });
     if (date) {
-      fetch(`http://localhost:5000/my-booking/update/${id}`, {
+      fetch(`https://hotelhive-kappa.vercel.app/my-booking/update/${id}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',

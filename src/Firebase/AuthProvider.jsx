@@ -52,7 +52,7 @@ function AuthProvider({ children }) {
 
   //logOut
   const logOut = async () => {
-    const { data } = await axios(`http://localhost:5000/logout`, {
+    const { data } = await axios(`https://hotelhive-kappa.vercel.app/logout`, {
       withCredentials: true,
     });
     console.log(data);
@@ -69,7 +69,7 @@ function AuthProvider({ children }) {
       if (currentUser) {
         const loggedUser = { email: currentUser.email };
         axios
-          .post('http://localhost:5000/jwt', loggedUser, {
+          .post('https://hotelhive-kappa.vercel.app/jwt', loggedUser, {
             withCredentials: true,
           })
           .then(res => {
